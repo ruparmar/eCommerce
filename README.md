@@ -1,6 +1,6 @@
 # eCommerce
 <h1>eCommerce Shopping Cart</h1>
-<p>Very small eCommerce application focussing on add to cart and buy now functionality using React and Redux.
+<p>Very small eCommerce application focussing on add to cart and buy now functionality using React and Redux.</p>
 ---------------------------------------------
   
 <h2>Prerequisites</h2>
