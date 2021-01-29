@@ -2,8 +2,8 @@ import React from 'react';
 import ProductList from '../../components/products/productlist';
 import { connect } from 'react-redux';
 import { acttype,messages } from '../../data/data';
-//import { getApiData } from '../../actions/action';
 import loader from '../../assets/images/loader.gif';
+import {removeOrder, setApiData} from '../../actions/action'
 import * as myData from '../../data/data.json';
 
 class HomePage extends React.Component{
@@ -16,7 +16,8 @@ class HomePage extends React.Component{
     componentDidMount(){
         document.title=messages.SITE_NAME;
         this.setState({activeindex:1,data:myData.default})
-        this.props.getData(myData.default)
+        this.props.setData(myData.default);
+        this.props.rmOrder();
     }
     render(){
         return (
@@ -31,10 +32,10 @@ class HomePage extends React.Component{
     }
 }
 
-const mapDispatchToProps = (dispatch) =>{
+const mapDispatchToProps = (dispatch) => {
     return {
-        removeOrder:dispatch({type:acttype.REMOVE_TO_ORDER}),
-        getData: (data) => dispatch({type:acttype.ADD_API_DATA,payload:data})
+        rmOrder:()=>dispatch(removeOrder()),
+        setData: (data) => dispatch(setApiData(data))
     }
 }
 const mapStateToProps = (state) => {
