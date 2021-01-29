@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { button,acttype,messages } from '../../data/data';
+import {addToCartAct} from '../../actions/action'
 import './product.css';
 
 class Product extends React.Component{
@@ -66,18 +67,16 @@ class Product extends React.Component{
         )
     }
 }
+
 const mapDispatchToProps = (dispatch)=>{
     return {
         addToCart:(product)=>{
-            dispatch({type:acttype.ADD_TO_CART,payload:product})
-        }/* ,
-        buyOrder:(product) => {
-            dispatch({type:acttype.ADD_TO_ORDER,payload:product})
-        } */
+            dispatch(addToCartAct(product))
+        }
     }
 }
+
 const mapStateToProps = (state) =>{
-    
     return{
         cart:state.cart,
         order:state.order,
