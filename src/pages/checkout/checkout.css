@@ -1,0 +1,30 @@
+.checkout{display: flex; margin-bottom: 50px;  }
+.checkout .left{width:50%}
+.checkout .right{width:50%}
+.checkout .left .shp_frm{ width:100%; margin-bottom: 20px; display:flex; }
+.checkout .left .shp_frm label{width:22%; margin-right: 20px;}
+.checkout .left .shp_frm input{width:60%;padding:7px 5px;}
+.checkout .right .cart{ width:92.5%; display: flex;}
+.checkout .right .cart .left{width:30%;}
+.checkout .right .cart .right{width:70%;} 
+.checkout .right .bg{width:92.6%; padding:0 20px;}
+.checkout .right .hide{display: none;}
+.checkout .right .paymentinfo{ display: flex; flex-wrap: wrap; padding:0 10px;}
+.checkout .right .paymentinfo div{width:100%; display: flex; margin-bottom: 14px;}
+.checkout .right .paymentinfo div label{width:50%;}
+.checkout .right .paymentinfo div span{ text-align:right; width:50%; }
+.checkout .right .paymentinfo .hr{ border-top: solid 1px #ccc; padding-top: 12px;}
+
+@media(max-width:769px){
+    .checkout{ flex-wrap: wrap; }
+    .checkout .left{width:100%}
+    .checkout .right{width:70%}
+
+   
+}
+@media(max-width:486px){
+    .checkout .right {
+        width: 92%;
+    }
+    .checkout .left .shp_frm label { width: 35%;}
+}

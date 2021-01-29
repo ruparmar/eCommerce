@@ -1,0 +1,12 @@
+header{ width:100% ;display:block;background-color: #e9efe6;}
+nav{display: flex; padding: 0 20px ;  }
+nav a{  width:30%; align-self: center; }
+ul{display: flex;  justify-content: flex-end; width:70% }
+li{margin-left:20px;}
+
+
+@media(max-width:485px){
+    .logo{display:none}
+    ul{width:100%; justify-content:flex-start ;padding:0; margin-left:0px;}
+    
+}
